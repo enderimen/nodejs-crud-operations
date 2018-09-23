@@ -11,4 +11,8 @@ app.set('views', path.join(__dirname, '/app_server/views'));
 app.use(ejs);
 app.use('/public', express.static(path.join(__dirname, 'public'))); // kullanıcıya erişim izni verdiğimiz dosyalar. (css vs.)
 
+
+// routes
+require('./app_server/routes/routeManager')(app);
+
 app.listen(8000);
